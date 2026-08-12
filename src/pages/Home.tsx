@@ -10,6 +10,7 @@ import img3 from "../assets/img3.webp"
 import img4 from "../assets/img4.webp"
 import img5 from "../assets/img5.webp"
 import img6 from "../assets/img6.webp"
+import { TestimonialsCarousel } from "../components/TestimonialCarousel";
 
 
 const capabilities = [
@@ -158,6 +159,9 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+      <section>
+        <TestimonialsCarousel/>
       </section>
 
       {/* CTA — full-bleed band */}
