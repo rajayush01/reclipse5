@@ -10,8 +10,64 @@ import img3 from "../assets/img3.webp"
 import img4 from "../assets/img4.webp"
 import img5 from "../assets/img5.webp"
 import img6 from "../assets/img6.webp"
+import img13 from "../assets/img13.webp"
+import img14 from "../assets/img14.webp"
+import img15 from "../assets/img15.webp"
+import img16 from "../assets/img16.webp"
 import { TestimonialsCarousel } from "../components/TestimonialCarousel";
 
+const stats = [
+  { value: "2018", label: "Founded" },
+  { value: "340+", label: "Shoots delivered" },
+  { value: "2", label: "Disciplines — photography & films" },
+  { value: "Mumbai", label: "Home studio" },
+];
+
+const process = [
+  {
+    index: "01",
+    title: "Discover",
+    copy: "A conversation before the camera comes out — the people, the day, the story we're actually there to tell.",
+  },
+  {
+    index: "02",
+    title: "Plan",
+    copy: "Shot list, timeline, and locations mapped in advance, so the day itself stays unhurried.",
+  },
+  {
+    index: "03",
+    title: "Shoot",
+    copy: "A quiet, unobtrusive presence — natural light and real moments over posed set pieces.",
+  },
+  {
+    index: "04",
+    title: "Deliver",
+    copy: "Stills and films edited into a considered set, sequenced with intention, not handed over as a dump.",
+  },
+];
+
+const frames = [
+  {
+    image: img14,
+    caption: "Threshold, Agra",
+    span: "md:col-span-4 md:row-span-2",
+  },
+  {
+    image: img13,
+    caption: "First light, forest edit",
+    span: "md:col-span-2",
+  },
+  {
+    image: img15,
+    caption: "Fireworks, wedding night",
+    span: "md:col-span-2",
+  },
+  {
+    image: img16,
+    caption: "Candlelight, reception",
+    span: "md:col-span-4",
+  },
+];
 
 const capabilities = [
   {
@@ -110,6 +166,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quick facts — compact stat strip */}
+      <section className="border-b border-stone">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <Reveal>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 py-10 sm:grid-cols-4 md:py-14">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-display text-3xl font-light text-ink md:text-4xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 font-mono text-[11px] uppercase tracking-widest2 text-mute">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Statement — split editorial layout */}
       <section className="border-y border-stone bg-paper-deep">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-12 md:gap-6 md:px-10 md:py-28">
@@ -141,6 +217,34 @@ export default function Home() {
       {/* Featured work — horizontal filmstrip */}
       <FilmstripSection />
 
+      {/* Process — how a shoot comes together */}
+      <section className="border-t border-stone bg-paper-deep">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+          <Reveal>
+            <span className="eyebrow">How we work</span>
+            <h2 className="mt-3 max-w-lg font-display text-3xl font-light text-ink md:text-4xl">
+              Four steps, the same every time
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
+            {process.map((step, i) => (
+              <Reveal key={step.index} delay={i * 0.08}>
+                <span className="font-display text-4xl font-light text-stone md:text-5xl">
+                  {step.index}
+                </span>
+                <h3 className="mt-4 font-display text-xl font-light text-ink">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-mute">
+                  {step.copy}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Capabilities — interactive row list linking to Photography / Films */}
       <section className="border-t border-stone">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
@@ -160,6 +264,46 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Recent frames — editorial mosaic */}
+      <section className="border-t border-stone">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+          <Reveal>
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <span className="eyebrow">Recent frames</span>
+                <h2 className="mt-3 font-display text-3xl font-light text-ink md:text-4xl">
+                  A few moments, out of context
+                </h2>
+              </div>
+              <Link
+                to="/films"
+                className="hidden font-mono text-[11px] uppercase tracking-widest2 text-mute hover:text-accent transition-colors md:block"
+              >
+                See the films →
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2 md:gap-4">
+            {frames.map((frame, i) => (
+              <Reveal key={frame.caption} delay={i * 0.07} className={frame.span}>
+                <div className="group relative h-full min-h-[260px] w-full overflow-hidden bg-paper-deep">
+                  <img
+                    src={frame.image}
+                    alt={frame.caption}
+                    className="h-full w-full object-cover transition-transform duration-[900ms] ease-smooth group-hover:scale-[1.045]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span className="absolute bottom-4 left-4 font-mono text-[11px] uppercase tracking-widest2 text-paper opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    {frame.caption}
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section>
         <TestimonialsCarousel/>
       </section>
