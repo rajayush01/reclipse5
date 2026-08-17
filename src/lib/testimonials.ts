@@ -46,7 +46,7 @@ export const testimonials: Testimonial[] = [
     slug: 'nadia-brandt',
     headline: 'Film day felt like the calmest part of the wedding.',
     body:
-      'Having the film crew alongside the stills meant we never had to perform a second time for the camera. Watching it back is **the closest thing** we have to reliving the day.',
+      'Having the film crew alongside the RECLIPSEs meant we never had to perform a second time for the camera. Watching it back is **the closest thing** we have to reliving the day.',
     name: 'Nadia Brandt',
     role: 'Wedding Film, Malmö',
     image: placeholderImage('testimonial-nadia-brandt', 900, 1100),

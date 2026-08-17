@@ -33,8 +33,8 @@ export default function Enquire() {
           <div className="mt-12 space-y-4 border-t border-stone pt-8">
             <div>
               <span className="eyebrow">Email</span>
-              <a href="mailto:hello@still-studio.com" className="mt-1 block text-[15px] text-ink hover:text-accent transition-colors">
-                hello@still-studio.com
+              <a href="mailto:hello@RECLIPSE-studio.com" className="mt-1 block text-[15px] text-ink hover:text-accent transition-colors">
+                hello@RECLIPSE-studio.com
               </a>
             </div>
             <div>

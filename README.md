@@ -1,4 +1,4 @@
-# STILL — Product Photography Studio
+# RECLIPSE — Product Photography Studio
 
 A minimal, whitish, product-photography-focused site built with React + TypeScript + Tailwind CSS + Framer Motion + React Router.
 

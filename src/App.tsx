@@ -11,6 +11,7 @@ import Films from "./pages/Films";
 import FAQs from "./pages/FAQs";
 import Enquire from "./pages/Enquire";
 import Studio from "./pages/Studio";
+import PhotographyProject from "./pages/PhotographyProject";
 
 export default function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ export default function App() {
               <Route path="/" element={<PageTransition><Home /></PageTransition>} />
               <Route path="/work" element={<PageTransition><Work /></PageTransition>} />
               <Route path="/photography" element={<PageTransition><Photography /></PageTransition>} />
+              <Route path="/photography/:id" element={<PageTransition><PhotographyProject /></PageTransition>} />
               <Route path="/films" element={<PageTransition><Films /></PageTransition>} />
               <Route path="/faqs" element={<PageTransition><FAQs /></PageTransition>} />
               <Route path="/enquire" element={<PageTransition><Enquire /></PageTransition>} />

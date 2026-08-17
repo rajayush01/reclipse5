@@ -260,7 +260,7 @@ export const faqs: Faq[] = [
     group: "Delivery",
     question: "What file formats do we receive?",
     answer:
-      "High-resolution TIFF and web-ready JPEG for stills, delivered via a private gallery link. Films are delivered as ProRes masters plus compressed web versions.",
+      "High-resolution TIFF and web-ready JPEG for RECLIPSEs, delivered via a private gallery link. Films are delivered as ProRes masters plus compressed web versions.",
   },
   {
     group: "Usage",

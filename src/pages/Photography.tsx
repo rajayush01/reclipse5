@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import { clientProjects } from "../lib/data";
 
@@ -50,6 +51,16 @@ export default function Photography() {
                       <span className="mt-1 block text-sm text-ink">{project.year}</span>
                     </div>
                   </div>
+
+                  <Link
+                    to={`/photography/${project.id}`}
+                    className="group mt-8 inline-flex items-center gap-3 border border-ink px-5 py-2.5 font-mono text-[11px] uppercase tracking-widest2 text-ink transition-colors duration-300 ease-smooth hover:bg-ink hover:text-paper"
+                  >
+                    View Project
+                    <span className="transition-transform duration-300 ease-smooth group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
                 </Reveal>
 
                 {/* Image column */}
@@ -64,13 +75,16 @@ export default function Photography() {
                       delay={idx * 0.08}
                       className={idx === 0 ? "col-span-2" : "col-span-1"}
                     >
-                      <div className="overflow-hidden bg-paper-deep">
+                      <Link
+                        to={`/photography/${project.id}`}
+                        className="block overflow-hidden bg-paper-deep"
+                      >
                         <img
                           src={src}
                           alt={`${project.title} — image ${idx + 1}`}
                           className="h-full w-full object-cover transition-transform duration-[900ms] ease-smooth hover:scale-[1.03]"
                         />
-                      </div>
+                      </Link>
                     </Reveal>
                   ))}
                 </div>

@@ -30,7 +30,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
         <NavLink to="/" className="font-display text-lg tracking-wide text-ink">
-          STILL
+          RECLIPSE
         </NavLink>
 
         <nav className="flex items-center gap-8">
@@ -39,8 +39,12 @@ export default function Nav() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `group relative font-mono text-[11px] uppercase tracking-widest2 transition-colors duration-300 ${
-                  isActive ? "text-ink" : "text-mute hover:text-ink"
+                `group relative font-mono text-sm uppercase tracking-widest2 transition-colors duration-300 ${
+                  scrolled
+                    ? isActive
+                      ? "text-ink font-bold "
+                      : "text-mute hover:text-ink"
+                    : "text-ink font-semibold"
                 }`
               }
             >
@@ -61,9 +65,11 @@ export default function Nav() {
             to="/enquire"
             className={({ isActive }) =>
               `border px-4 py-2 font-mono text-[11px] uppercase tracking-widest2 transition-colors duration-300 ease-smooth ${
-                isActive
-                  ? "border-ink bg-ink text-paper"
-                  : "border-ink text-ink hover:bg-ink hover:text-paper"
+                scrolled
+                  ? isActive
+                    ? "border-ink bg-ink text-paper"
+                    : "border-ink text-ink hover:bg-ink hover:text-paper"
+                  : "border-ink bg-ink text-paper"
               }`
             }
           >

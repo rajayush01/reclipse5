@@ -42,7 +42,7 @@ const process = [
   {
     index: "04",
     title: "Deliver",
-    copy: "Stills and films edited into a considered set, sequenced with intention, not handed over as a dump.",
+    copy: "RECLIPSEs and films edited into a considered set, sequenced with intention, not handed over as a dump.",
   },
 ];
 
@@ -78,7 +78,7 @@ const capabilities = [
   },
   {
     title: "Films",
-    copy: "Short-form process and campaign films, shot with the same restraint as our stills.",
+    copy: "Short-form process and campaign films, shot with the same restraint as our RECLIPSEs.",
     to: "/films",
     image: img3,
   },
@@ -96,7 +96,7 @@ const capabilities = [
   },
 ];
 
-const headline = ["Every object", "has a moment", "of stillness."];
+const headline = ["Every object", "has a moment", "of RECLIPSEness."];
 
 export default function Home() {
   return (
@@ -325,7 +325,7 @@ export default function Home() {
               Have an object in mind?
             </span>
             <h2 className="mx-auto mt-4 max-w-xl font-display text-3xl font-light text-paper md:text-5xl">
-              Let's find its stillness together.
+              Let's find its RECLIPSEness together.
             </h2>
             <Link
               to="/enquire"

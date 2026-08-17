@@ -15,7 +15,7 @@ export default function Films() {
         </h1>
         <p className="mt-4 max-w-lg text-sm leading-relaxed text-mute">
           Short-form process and campaign films, shot with the same
-          restraint as our stills.
+          restraint as our RECLIPSEs.
         </p>
       </Reveal>
 

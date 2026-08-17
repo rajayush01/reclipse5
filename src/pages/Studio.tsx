@@ -17,7 +17,7 @@ export default function Studio() {
           </h1>
           <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-mute">
             <p>
-              Still began as a one-room studio shooting ceramics for local
+              RECLIPSE began as a one-room studio shooting ceramics for local
               makers. It stayed that size on purpose — every shoot is planned,
               shot, and edited by the same small team, so nothing about the
               object gets lost in translation.
@@ -39,8 +39,8 @@ export default function Studio() {
         <Reveal delay={0.15} className="md:pt-16">
           <div className="aspect-[4/5] w-full overflow-hidden bg-paper-deep">
             <img
-              src="https://picsum.photos/seed/still-studio/900/1100"
-              alt="Inside the Still studio space"
+              src="https://picsum.photos/seed/RECLIPSE-studio/900/1100"
+              alt="Inside the RECLIPSE studio space"
               className="h-full w-full object-cover"
             />
           </div>
