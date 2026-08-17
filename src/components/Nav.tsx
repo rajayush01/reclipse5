@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const links = [
-  { to: "/work", label: "Work" },
+  // { to: "/work", label: "Work" },
   { to: "/photography", label: "Photography" },
   { to: "/films", label: "Films" },
   { to: "/faqs", label: "FAQs" },
@@ -42,7 +42,7 @@ export default function Nav() {
                 `group relative font-mono text-sm uppercase tracking-widest2 transition-colors duration-300 ${
                   scrolled
                     ? isActive
-                      ? "text-ink font-bold "
+                      ? "text-ink font-bold"
                       : "text-mute hover:text-ink"
                     : "text-ink font-semibold"
                 }`

@@ -16,6 +16,75 @@ import img15 from "../assets/img15.webp"
 import img16 from "../assets/img16.webp"
 import { TestimonialsCarousel } from "../components/TestimonialCarousel";
 
+
+function FilmsSection() {
+  const reel = films.slice(0, 3);
+
+  return (
+    <section className="border-t border-stone">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+        <Reveal>
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <span className="eyebrow">Motion</span>
+              <h2 className="mt-3 font-display text-3xl font-light text-ink md:text-4xl">
+                A few films, held longer
+              </h2>
+            </div>
+            <Link
+              to="/films"
+              className="hidden font-mono text-[11px] uppercase tracking-widest2 text-mute hover:text-accent transition-colors md:block"
+            >
+              See all films →
+            </Link>
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {reel.map((film, i) => (
+            <Reveal key={film.id} delay={i * 0.08}>
+              <Link to="/films" className="group block">
+                <div className="relative aspect-[4/5] overflow-hidden bg-paper-deep">
+                  <img
+                    src={film.thumbnail}
+                    alt={film.title}
+                    className="h-full w-full object-cover transition-transform duration-[900ms] ease-smooth group-hover:scale-[1.045]"
+                  />
+                  <div className="absolute inset-0 bg-ink/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-paper text-paper">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L14 8L0 16V0Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </span>
+                  <span className="absolute bottom-4 right-4 font-mono text-[11px] text-paper opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    {film.duration}
+                  </span>
+                </div>
+                <div className="mt-3 flex items-baseline justify-between">
+                  <span className="font-display text-[15px] text-ink">{film.title}</span>
+                  <span className="font-mono text-[11px] text-mute">{film.client}</span>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+
+        <Link
+          to="/films"
+          className="mt-10 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest2 text-ink md:hidden"
+        >
+          See all films
+          <span className="relative h-px w-10 overflow-hidden bg-stone">
+            <span className="absolute inset-0 origin-left scale-x-0 bg-accent transition-transform duration-500 ease-smooth" />
+          </span>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 const stats = [
   { value: "2018", label: "Founded" },
   { value: "340+", label: "Shoots delivered" },
@@ -216,6 +285,9 @@ export default function Home() {
 
       {/* Featured work — horizontal filmstrip */}
       <FilmstripSection />
+
+      {/* Films — selected motion work */}
+      <FilmsSection />
 
       {/* Process — how a shoot comes together */}
       <section className="border-t border-stone bg-paper-deep">
