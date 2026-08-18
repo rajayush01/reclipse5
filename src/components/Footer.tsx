@@ -13,21 +13,37 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <span className="eyebrow mb-2">Studio</span>
-            <Link to="/work" className="text-sm text-ink/80 hover:text-accent transition-colors">
-              Work
-            </Link>
-            <Link to="/photography" className="text-sm text-ink/80 hover:text-accent transition-colors">
-              Photography
-            </Link>
-            <Link to="/films" className="text-sm text-ink/80 hover:text-accent transition-colors">
-              Films
-            </Link>
-            <Link to="/studio" className="text-sm text-ink/80 hover:text-accent transition-colors">
-              About
-            </Link>
-          </div>
+       <div className="flex flex-col gap-2">
+  <span className="eyebrow mb-2">Studio</span>
+
+  <Link
+    to="/photography"
+    className="text-sm text-ink/80 transition-colors hover:text-accent"
+  >
+    Photography
+  </Link>
+
+  <Link
+    to="/films"
+    className="text-sm text-ink/80 transition-colors hover:text-accent"
+  >
+    Films
+  </Link>
+
+  <Link
+    to="/faqs"
+    className="text-sm text-ink/80 transition-colors hover:text-accent"
+  >
+    FAQs
+  </Link>
+
+  <Link
+    to="/enquire"
+    className="text-sm text-ink/80 transition-colors hover:text-accent"
+  >
+    Enquire
+  </Link>
+</div>
 
           <div className="flex flex-col gap-2">
             <span className="eyebrow mb-2">Contact</span>
@@ -38,12 +54,7 @@ export default function Footer() {
               +91 22 0000 0000
             </a>
             <span className="text-sm text-mute">Mumbai, India</span>
-            <Link to="/faqs" className="mt-2 text-sm text-ink/80 hover:text-accent transition-colors">
-              FAQs
-            </Link>
-            <Link to="/enquire" className="text-sm text-ink/80 hover:text-accent transition-colors">
-              Enquire
-            </Link>
+          
           </div>
         </div>
 
